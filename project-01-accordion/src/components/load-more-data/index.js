@@ -12,7 +12,7 @@ export default function LoadMoreData() {
         try {
                 setLoading(true)
             const response = await fetch(
-                `https://dummyjson.com/products?limit=20&skip=${count === 0 ? 0 : count * 20
+                `https://dummyjson.com/products?limit=4&skip=${count === 0 ? 0 : count * 4
                 }`
             )
 
