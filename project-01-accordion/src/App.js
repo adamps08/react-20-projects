@@ -9,6 +9,7 @@ import menus from './components/tree-view/data';
 import QRCodeGenerator from './components/qr-code-generator';
 import LightDarkMode from './components/light-dark-mode';
 import ScrollIndicator from './components/scroll-indicator';
+import TabTest from './components/custom-tabs/tab-test';
 
 function App() {
   return (
@@ -29,13 +30,16 @@ function App() {
       <LoadMoreData/>
       {/* Tree-view Component */}
       <TreeView menus={menus}/>
-      {/* QR Code Generator Componenet */}
+      {/* QR Code Generator Componet */}
       <QRCodeGenerator/>
       {/* Light and Dark Mode */}
       <LightDarkMode/>
-      {/* Scroll Indicator Componenet */}
+      {/* Scroll Indicator Componet */}
       <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      {/* Custom Tabs Componet */}
+      <TabTest/>
     </div>
+
   );
 }
 

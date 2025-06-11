@@ -8,25 +8,25 @@ export default function ScrollIndicator({ url }) {
     const [errorMessage, setErrorMessage] = useState('')
     const [scrollPercentage, setScrollPercentage] = useState(0)
 
-    async function fetchData(getUrl) {
-        try {
-            setLoading(true)
-            const response = await fetch(getUrl)
-            const data = await response.json()
-            if (data && data.products && data.products.length > 0) {
-                setData(data.products)
-                setLoading(false)
-            }
+    // async function fetchData(getUrl) {
+    //     try {
+    //         setLoading(true)
+    //         const response = await fetch(getUrl)
+    //         const data = await response.json()
+    //         if (data && data.products && data.products.length > 0) {
+    //             setData(data.products)
+    //             setLoading(false)
+    //         }
 
-        } catch (e) {
-            console.log(e)
-            setErrorMessage(e.message)
-        }
-    }
+    //     } catch (e) {
+    //         console.log(e)
+    //         setErrorMessage(e.message)
+    //     }
+    // }
 
-    useEffect(() => {
-        fetchData(url)
-    }, [url]);
+    // useEffect(() => {
+    //     fetchData(url)
+    // }, [url]);
 
     function handleScrollPercentage() {
         console.log(
